@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shekinah Glory Fellowship Church | Experiencing God's Presence & Power | Suva, Fiji</title>
+    <meta name="description" content="Welcome to Shekinah Glory Fellowship Church in Suva, Fiji. A place where faith grows, hearts are healed, and lives are transformed by the power of Jesus Christ.">
+    <meta name="keywords" content="Shekinah Glory Fellowship, Church Suva Fiji, Christian Church Fiji, Fellowship Church">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Shekinah Glory Fellowship Church | Suva, Fiji">
+    <meta property="og:description" content="Experiencing God's Presence & Power in Suva, Fiji.">
+    <meta property="og:type" content="website">
+
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        navy: {
+                            DEFAULT: '#1B2A6B',
+                            dark: '#131F52',
+                            light: '#2D3F8F',
+                            50: '#EEF0F9',
+                            100: '#D5DAF0',
+                        },
+                        orange: {
+                            DEFAULT: '#E8621A',
+                            dark: '#C94F0D',
+                            light: '#F07830',
+                            50: '#FEF3EC',
+                            100: '#FCDEC8',
+                        },
+                        hero: {
+                            from: '#3B3589',
+                            via: '#7B4FA0',
+                            to: '#C4622D',
+                        }
+                    },
+                    backgroundImage: {
+                        'hero-gradient': 'linear-gradient(135deg, #1B2A6B 0%, #6B4FBB 35%, #A85530 70%, #C4622D 100%)',
+                        'hero-warm': 'linear-gradient(160deg, #2D1B6B 0%, #7B3FAA 40%, #C4622D 75%, #E8621A 100%)',
+                        'section-light': 'linear-gradient(135deg, #F8F9FF 0%, #EEF0F9 100%)',
+                        'card-hover': 'linear-gradient(135deg, #1B2A6B 0%, #2D3F8F 100%)',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s ease-in-out infinite',
+                        'slide-up': 'slideUp 0.8s ease forwards',
+                        'fade-in': 'fadeIn 1s ease forwards',
+                        'bounce-gentle': 'bounceGentle 2s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: { '0%,100%': {transform:'translateY(0)'}, '50%': {transform:'translateY(-12px)'} },
+                        slideUp: { '0%': {opacity:0,transform:'translateY(30px)'}, '100%': {opacity:1,transform:'translateY(0)'} },
+                        fadeIn: { '0%': {opacity:0}, '100%': {opacity:1} },
+                        bounceGentle: { '0%,100%': {transform:'translateY(0)'}, '50%': {transform:'translateY(-6px)'} },
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* ===== GLOBAL CUSTOM STYLES ===== */
+        * { box-sizing: border-box; }
+        
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #F8F9FF; }
+        ::-webkit-scrollbar-thumb { background: #1B2A6B; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #E8621A; }
+
+        /* Glass Effect */
+        .glass-white {
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .glass-navy {
+            background: rgba(27,42,107,0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Premium Card Hover */
+        .card-premium {
+            transition: all 0.4s cubic-bezier(0.16,1,0.3,1);
+        }
+        .card-premium:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 32px 64px -16px rgba(27,42,107,0.25);
+        }
+
+        /* Orange Glow Button */
+        .btn-orange {
+            background: linear-gradient(135deg, #E8621A, #C94F0D);
+            box-shadow: 0 8px 24px -4px rgba(232,98,26,0.45);
+            transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
+        }
+        .btn-orange:hover {
+            background: linear-gradient(135deg, #F07830, #E8621A);
+            box-shadow: 0 12px 32px -4px rgba(232,98,26,0.6);
+            transform: translateY(-2px);
+        }
+
+        /* Navy Button */
+        .btn-navy {
+            background: linear-gradient(135deg, #1B2A6B, #131F52);
+            box-shadow: 0 8px 24px -4px rgba(27,42,107,0.4);
+            transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
+        }
+        .btn-navy:hover {
+            box-shadow: 0 12px 32px -4px rgba(27,42,107,0.55);
+            transform: translateY(-2px);
+        }
+
+        /* Text gradients */
+        .text-orange-gradient {
+            background: linear-gradient(135deg, #E8621A, #F59E0B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .text-navy-gradient {
+            background: linear-gradient(135deg, #1B2A6B, #2D3F8F);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Hero text shadow for readability */
+        .hero-text-shadow {
+            text-shadow: 0 2px 20px rgba(0,0,0,0.35);
+        }
+
+        /* Section divider wave */
+        .wave-divider svg { display: block; }
+
+        /* Stats counter animation */
+        .stat-card {
+            background: white;
+            border-radius: 20px;
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: 0 4px 24px rgba(27,42,107,0.08);
+            transition: all 0.4s ease;
+            border-bottom: 4px solid transparent;
+        }
+        .stat-card:hover {
+            border-bottom-color: #E8621A;
+            transform: translateY(-6px);
+            box-shadow: 0 20px 48px rgba(27,42,107,0.15);
+        }
+
+        /* Sermon card */
+        .sermon-card {
+            transition: all 0.4s cubic-bezier(0.16,1,0.3,1);
+        }
+        .sermon-card:hover .sermon-play-btn {
+            background: #E8621A;
+            transform: scale(1.15);
+        }
+        .sermon-play-btn {
+            transition: all 0.3s ease;
+        }
+
+        /* Navigation active indicator */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px; left: 0; right: 0;
+            height: 2px;
+            background: #E8621A;
+            border-radius: 2px;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
+        .nav-link:hover { color: #E8621A; }
+        .nav-link.active { color: #E8621A; font-weight: 700; }
+
+        /* Ministry card overlay */
+        .ministry-card-img {
+            transition: transform 0.6s ease;
+        }
+        .ministry-card:hover .ministry-card-img {
+            transform: scale(1.08);
+        }
+
+        /* Event date badge */
+        .event-date-badge {
+            background: linear-gradient(135deg, #E8621A, #C94F0D);
+        }
+
+        /* Testimonial card */
+        .testimonial-card {
+            background: white;
+            border-radius: 24px;
+            padding: 36px 32px;
+            box-shadow: 0 4px 24px rgba(27,42,107,0.08);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        .testimonial-card::before {
+            content: '"';
+            font-family: 'Playfair Display', serif;
+            font-size: 120px;
+            color: #EEF0F9;
+            position: absolute;
+            top: -10px; left: 20px;
+            line-height: 1;
+            z-index: 0;
+        }
+        .testimonial-card:hover {
+            box-shadow: 0 20px 48px rgba(27,42,107,0.15);
+            transform: translateY(-6px);
+        }
+
+        /* Form focus styles */
+        .form-input {
+            transition: all 0.3s ease;
+            border: 2px solid #E5E7EB;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #1B2A6B;
+            box-shadow: 0 0 0 4px rgba(27,42,107,0.08);
+        }
+
+        /* Giving card */
+        .giving-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(27,42,107,0.08);
+            transition: all 0.4s ease;
+        }
+        .giving-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 32px 64px rgba(27,42,107,0.2);
+        }
+
+        /* Mobile menu transition */
+        #mobileMenu {
+            transition: all 0.4s cubic-bezier(0.16,1,0.3,1);
+        }
+
+        /* Smooth reveal on scroll (JS-powered) */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s cubic-bezier(0.16,1,0.3,1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+    </style>
+</head>
+
+<body class="font-sans antialiased text-gray-800 overflow-x-hidden bg-white">
+
+    <!-- ======================================================= -->
+    <!-- TOP INFO BAR -->
+    <!-- ======================================================= -->
+    <div class="bg-navy-dark text-white py-2.5 px-4 text-xs hidden md:block">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-6">
+                <a href="https://maps.google.com" target="_blank" class="flex items-center gap-1.5 hover:text-orange-DEFAULT transition-colors duration-200">
+                    <i data-lucide="map-pin" class="w-3.5 h-3.5 text-orange-DEFAULT"></i>
+                    <span>VFM7+HR8 Golf Link Rd, Suva, Fiji</span>
+                </a>
+                <a href="tel:+6799335862" class="flex items-center gap-1.5 hover:text-orange-DEFAULT transition-colors duration-200">
+                    <i data-lucide="phone" class="w-3.5 h-3.5 text-orange-DEFAULT"></i>
+                    <span>+679 933 5862</span>
+                </a>
+                <a href="mailto:info@shekinahgloryfellowship.fj" class="flex items-center gap-1.5 hover:text-orange-DEFAULT transition-colors duration-200">
+                    <i data-lucide="mail" class="w-3.5 h-3.5 text-orange-DEFAULT"></i>
+                    <span>info@shekinahgloryfellowship.fj</span>
+                </a>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="#" class="w-7 h-7 rounded-full bg-navy-light hover:bg-orange-DEFAULT flex items-center justify-center transition-all duration-200">
+                    <i data-lucide="facebook" class="w-3.5 h-3.5"></i>
+                </a>
+                <a href="mailto:info@shekinahgloryfellowship.fj" class="w-7 h-7 rounded-full bg-navy-light hover:bg-orange-DEFAULT flex items-center justify-center transition-all duration-200">
+                    <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+                </a>
+                <a href="tel:+6799335862" class="w-7 h-7 rounded-full bg-navy-light hover:bg-orange-DEFAULT flex items-center justify-center transition-all duration-200">
+                    <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================= -->
+    <!-- MAIN NAVIGATION -->
+    <!-- ======================================================= -->
+    <header id="mainHeader" class="sticky top-0 z-50 bg-white shadow-sm transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+            
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-3 group flex-shrink-0">
+                <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-navy-100 group-hover:border-orange-DEFAULT transition-all duration-300 shadow-md">
+                    <img src="logo.jpg" alt="Shekinah Glory Fellowship Church Logo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="flex flex-col leading-tight">
+                    <span class="font-serif text-xl font-bold text-navy-DEFAULT tracking-tight">Shekinah Glory</span>
+                    <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-orange-DEFAULT">Fellowship Church</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="index.html" class="nav-link active text-sm font-semibold text-navy-DEFAULT">Home</a>
+                <a href="about.html" class="nav-link text-sm font-semibold text-gray-600">About</a>
+                <a href="ministries.html" class="nav-link text-sm font-semibold text-gray-600">Ministries</a>
+                <a href="sermons.html" class="nav-link text-sm font-semibold text-gray-600">Sermons</a>
+                <a href="events.html" class="nav-link text-sm font-semibold text-gray-600">Events</a>
+                <a href="contact.html" class="nav-link text-sm font-semibold text-gray-600">Contact</a>
+            </nav>
+
+            <!-- Give Now CTA -->
+            <div class="hidden lg:flex items-center gap-3">
+                <a href="give.html" class="btn-orange px-6 py-3 rounded-full text-white text-sm font-bold flex items-center gap-2 uppercase tracking-wide">
+                    Give Now <i data-lucide="heart" class="w-4 h-4 fill-white"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg hover:bg-navy-50 transition" aria-label="Toggle Menu">
+                <i data-lucide="menu" class="w-6 h-6 text-navy-DEFAULT" id="menuIcon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-xl">
+            <div class="px-6 py-6 flex flex-col gap-4">
+                <a href="index.html" class="text-navy-DEFAULT font-bold text-lg border-b border-gray-100 pb-4">Home</a>
+                <a href="about.html" class="text-gray-600 font-semibold text-lg border-b border-gray-100 pb-4 hover:text-navy-DEFAULT transition">About</a>
+                <a href="ministries.html" class="text-gray-600 font-semibold text-lg border-b border-gray-100 pb-4 hover:text-navy-DEFAULT transition">Ministries</a>
+                <a href="sermons.html" class="text-gray-600 font-semibold text-lg border-b border-gray-100 pb-4 hover:text-navy-DEFAULT transition">Sermons</a>
+                <a href="events.html" class="text-gray-600 font-semibold text-lg border-b border-gray-100 pb-4 hover:text-navy-DEFAULT transition">Events</a>
+                <a href="contact.html" class="text-gray-600 font-semibold text-lg border-b border-gray-100 pb-4 hover:text-navy-DEFAULT transition">Contact</a>
+                <a href="give.html" class="btn-orange px-6 py-3 rounded-full text-white text-sm font-bold text-center flex items-center justify-center gap-2 mt-2">
+                    Give Now <i data-lucide="heart" class="w-4 h-4 fill-white"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======================================================= -->
+    <!-- HERO SECTION — CINEMATIC FULL SCREEN -->
+    <!-- ======================================================= -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background: Hero gradient with overlay on a real worship image -->
+        <div class="absolute inset-0 bg-hero-warm z-0"></div>
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=1920')] bg-cover bg-center opacity-30 mix-blend-overlay z-0"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/50 z-0"></div>
+
+        <!-- Animated floating orbs (match logo colors) -->
+        <div class="absolute top-20 right-20 w-80 h-80 rounded-full bg-orange-DEFAULT/20 blur-3xl animate-float"></div>
+        <div class="absolute bottom-20 left-20 w-96 h-96 rounded-full bg-navy-light/30 blur-3xl animate-pulse-slow"></div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            
+            <!-- Welcome Badge -->
+            <div class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-orange-DEFAULT/90 text-white text-xs font-bold uppercase tracking-widest mb-8 hero-text-shadow shadow-lg">
+                Welcome to Shekinah Glory Fellowship
+            </div>
+
+            <!-- Main Hero Title -->
+            <h1 class="font-serif font-bold hero-text-shadow mb-4 leading-tight">
+                <span class="block text-5xl md:text-7xl lg:text-8xl text-white font-bold">Experiencing God's</span>
+                <span class="block text-5xl md:text-7xl lg:text-8xl italic text-orange-DEFAULT mt-2" style="text-shadow: 0 2px 30px rgba(232,98,26,0.5)">Presence & Power</span>
+            </h1>
+
+            <!-- Sub-headline -->
+            <p class="text-white/90 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto mt-6 mb-12 hero-text-shadow">
+                A place in Suva, Fiji where faith grows, hearts are healed, and lives are transformed by the power of Jesus Christ.
+            </p>
+
+            <!-- Hero Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="contact.html#visit" class="btn-orange px-8 py-4 rounded-full text-white text-sm font-bold uppercase tracking-wide w-full sm:w-auto">
+                    Plan Your Visit
+                </a>
+                <a href="sermons.html" class="glass-white px-8 py-4 rounded-full text-white text-sm font-bold uppercase tracking-wide w-full sm:w-auto flex items-center justify-center gap-3 hover:bg-white/20 transition duration-300">
+                    Watch Sermons <i data-lucide="play-circle" class="w-5 h-5 fill-white/80"></i>
+                </a>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce-gentle">
+                <span class="text-white/50 text-[10px] uppercase tracking-widest">Scroll</span>
+                <i data-lucide="chevrons-down" class="w-5 h-5 text-white/50"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- SERVICE TIMES QUICK BAR -->
+    <!-- ======================================================= -->
+    <section class="bg-navy-DEFAULT py-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-white/10">
+                
+                <div class="flex items-center gap-4 px-6 py-4 md:py-2 group cursor-pointer">
+                    <div class="w-12 h-12 rounded-full bg-orange-DEFAULT/20 flex items-center justify-center flex-shrink-0 group-hover:bg-orange-DEFAULT transition duration-300">
+                        <i data-lucide="sun" class="w-6 h-6 text-orange-DEFAULT group-hover:text-white transition duration-300"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold text-sm">Sunday Services</h4>
+                        <p class="text-white/60 text-xs">9:00 AM &amp; 11:30 AM</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 px-6 py-4 md:py-2 group cursor-pointer">
+                    <div class="w-12 h-12 rounded-full bg-orange-DEFAULT/20 flex items-center justify-center flex-shrink-0 group-hover:bg-orange-DEFAULT transition duration-300">
+                        <i data-lucide="flame" class="w-6 h-6 text-orange-DEFAULT group-hover:text-white transition duration-300"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold text-sm">Wednesday Prayer Night</h4>
+                        <p class="text-white/60 text-xs">7:00 PM — Midweek Fire</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 px-6 py-4 md:py-2 group cursor-pointer">
+                    <div class="w-12 h-12 rounded-full bg-orange-DEFAULT/20 flex items-center justify-center flex-shrink-0 group-hover:bg-orange-DEFAULT transition duration-300">
+                        <i data-lucide="map-pin" class="w-6 h-6 text-orange-DEFAULT group-hover:text-white transition duration-300"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold text-sm">Our Location</h4>
+                        <p class="text-white/60 text-xs">VFM7+HR8 Golf Link Rd, Suva, Fiji</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- WELCOME / MISSION SECTION -->
+    <!-- ======================================================= -->
+    <section class="py-24 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <!-- Image Column -->
+            <div class="relative reveal">
+                <!-- Main Image -->
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5]">
+                    <img src="https://images.unsplash.com/photo-1609234656388-0ff363383899?auto=format&fit=crop&q=80&w=900" 
+                         alt="Worship at Shekinah Glory Fellowship Suva Fiji" 
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-DEFAULT/70 via-transparent to-transparent"></div>
+                </div>
+
+                <!-- Floating Mission Badge -->
+                <div class="absolute -bottom-8 -right-6 md:-right-12 bg-white rounded-2xl p-6 shadow-2xl border border-navy-50 max-w-[220px]">
+                    <img src="logo.jpg" alt="Logo" class="w-12 h-12 rounded-full mb-3 border-2 border-orange-DEFAULT object-cover">
+                    <p class="font-serif text-sm font-bold text-navy-DEFAULT leading-snug">"Experiencing God's Presence &amp; Power"</p>
+                </div>
+
+                <!-- Top Decorative Element -->
+                <div class="absolute -top-6 -left-6 w-24 h-24 rounded-2xl bg-orange-DEFAULT/10 border-2 border-orange-DEFAULT/20"></div>
+                <div class="absolute -top-3 -left-3 w-24 h-24 rounded-2xl bg-navy-DEFAULT/5 border border-navy-100"></div>
+            </div>
+
+            <!-- Text Column -->
+            <div class="flex flex-col gap-6 reveal reveal-delay-2">
+                <span class="text-xs font-bold uppercase tracking-[0.3em] text-orange-DEFAULT">Welcome to Our Family</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-navy-DEFAULT leading-tight">
+                    A Church Built on <span class="text-orange-gradient">Authentic Encounters</span> With God
+                </h2>
+                <p class="text-gray-500 leading-relaxed text-lg font-light">
+                    Shekinah Glory Fellowship Church is a vibrant, Spirit-filled community rooted in the Word of God. We believe every person who walks through our doors carries a God-given purpose waiting to be discovered, developed, and deployed.
+                </p>
+                <p class="text-gray-500 leading-relaxed font-light">
+                    Whether you're a lifelong believer or exploring faith for the first time, you will find a warm family here in the heart of Suva, Fiji — a family that worships freely, prays fervently, and loves unconditionally.
+                </p>
+
+                <!-- Core Values Row -->
+                <div class="grid grid-cols-3 gap-4 mt-4">
+                    <div class="flex flex-col items-center text-center p-4 rounded-2xl bg-navy-50 hover:bg-navy-DEFAULT hover:text-white transition-all duration-300 group">
+                        <i data-lucide="book-open" class="w-6 h-6 text-orange-DEFAULT mb-2 group-hover:text-orange-light transition"></i>
+                        <span class="text-xs font-bold text-navy-DEFAULT group-hover:text-white transition">Word-Based</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-4 rounded-2xl bg-navy-50 hover:bg-navy-DEFAULT hover:text-white transition-all duration-300 group">
+                        <i data-lucide="flame" class="w-6 h-6 text-orange-DEFAULT mb-2 group-hover:text-orange-light transition"></i>
+                        <span class="text-xs font-bold text-navy-DEFAULT group-hover:text-white transition">Spirit-Led</span>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-4 rounded-2xl bg-navy-50 hover:bg-navy-DEFAULT hover:text-white transition-all duration-300 group">
+                        <i data-lucide="heart" class="w-6 h-6 text-orange-DEFAULT mb-2 group-hover:text-orange-light transition"></i>
+                        <span class="text-xs font-bold text-navy-DEFAULT group-hover:text-white transition">Love-Driven</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-4 mt-4">
+                    <a href="about.html" class="btn-navy px-7 py-3.5 rounded-full text-white text-sm font-bold uppercase tracking-wide">
+                        Our Story
+                    </a>
+                    <a href="contact.html#visit" class="px-7 py-3.5 rounded-full text-sm font-bold uppercase tracking-wide border-2 border-navy-DEFAULT text-navy-DEFAULT hover:bg-navy-DEFAULT hover:text-white transition-all duration-300">
+                        Plan Your Visit
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- STATISTICS / IMPACT COUNTER SECTION -->
+    <!-- ======================================================= -->
+    <section class="py-20 bg-section-light">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center mb-14 reveal">
+                <span class="text-xs font-bold uppercase tracking-[0.3em] text-orange-DEFAULT">God's Kingdom Growing</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-navy-DEFAULT mt-3">Lives Being Transformed Daily</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="stat-card reveal reveal-delay-1">
+                    <div class="text-4xl md:text-5xl font-serif font-bold text-orange-DEFAULT mb-2" data-count="2500">2,500+</div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-navy-DEFAULT/60">Weekly Attendees</div>
+                </div>
+                <div class="stat-card reveal reveal-delay-2">
+                    <div class="text-4xl md:text-5xl font-serif font-bold text-orange-DEFAULT mb-2" data-count="15">15+</div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-navy-DEFAULT/60">Active Ministries</div>
+                </div>
+                <div class="stat-card reveal reveal-delay-3">
+                    <div class="text-4xl md:text-5xl font-serif font-bold text-orange-DEFAULT mb-2" data-count="20">20+</div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-navy-DEFAULT/60">Years of Ministry</div>
+                </div>
+                <div class="stat-card reveal reveal-delay-4">
+                    <div class="text-4xl md:text-5xl font-serif font-bold text-orange-DEFAULT mb-2" data-count="500">500+</div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-navy-DEFAULT/60">Salvations This Year</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- LATEST SERMON SECTION -->
+    <!-- ======================================================= -->
+    <section class="py-24 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6 reveal">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-[0.3em] text-orange-DEFAULT">Fresh from the Pulpit</span>
+                    <h2 class="text-3xl md:text-5xl font-serif font-bold text-navy-DEFAULT mt-3 leading-tight">Latest Sermon</h2>
+                </div>
+                <a href="sermons.html" class="inline-flex items-center gap-2 text-sm font-bold text-navy-DEFAULT hover:text-orange-DEFAULT transition-colors uppercase tracking-wider">
+                    Full Sermon Archive <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <!-- Featured Sermon Card -->
+            <div class="bg-section-light rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-xl border border-navy-50 group reveal">
+                <div class="relative aspect-video lg:aspect-auto min-h-[280px] overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=900" 
+                         alt="Latest Sermon - Shekinah Glory Fellowship" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    <div class="absolute inset-0 bg-navy-DEFAULT/40"></div>
+                    
+                    <!-- Play Button Overlay -->
+                    <a href="sermons.html" class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-20 h-20 rounded-full bg-orange-DEFAULT flex items-center justify-center shadow-2xl hover:scale-110 transition duration-300">
+                            <i data-lucide="play" class="w-8 h-8 text-white fill-white translate-x-0.5"></i>
+                        </div>
+                    </a>
+
+                    <!-- Duration Badge -->
+                    <div class="absolute bottom-4 right-4 bg-black/60 px-3 py-1 rounded-full text-white text-xs font-semibold backdrop-blur-sm">
+                        42:15
+                    </div>
+                </div>
+
+                <div class="p-8 md:p-12 flex flex-col justify-center">
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-50 text-orange-DEFAULT text-xs font-bold uppercase tracking-widest mb-6 self-start border border-orange-100">
+                        <i data-lucide="radio" class="w-3 h-3"></i> Latest Message
+                    </span>
+                    <h3 class="text-2xl md:text-3xl font-serif font-bold text-navy-DEFAULT mb-4 leading-snug">
+                        "The Weight of His Glory — Understanding Shekinah"
+                    </h3>
+                    <p class="text-gray-500 font-light leading-relaxed mb-6">
+                        Dive deep into the biblical concept of "Shekinah" — God's tangible, dwelling presence among His people. Discover how to position yourself to experience heaven's fullness in every area of your life.
+                    </p>
+                    <div class="flex items-center gap-6 text-xs text-gray-400 border-t border-gray-100 pt-6 mb-8">
+                        <span class="flex items-center gap-2">
+                            <i data-lucide="user" class="w-3.5 h-3.5 text-navy-DEFAULT"></i>
+                            <span class="font-semibold text-navy-DEFAULT">Bishop Anthony Jenkins</span>
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <i data-lucide="calendar" class="w-3.5 h-3.5 text-navy-DEFAULT"></i>
+                            October 12, 2026
+                        </span>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="sermons.html" class="btn-orange px-6 py-3 rounded-full text-white text-xs font-bold uppercase tracking-wide flex items-center gap-2">
+                            <i data-lucide="play" class="w-4 h-4 fill-white"></i> Watch Now
+                        </a>
+                        <a href="sermons.html#audio" class="px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wide border-2 border-navy-DEFAULT text-navy-DEFAULT hover:bg-navy-DEFAULT hover:text-white transition duration-300 flex items-center gap-2">
+                            <i data-lucide="headphones" class="w-4 h-4"></i> Listen Audio
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secondary Sermon Cards Row -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                
+                <div class="sermon-card card-premium bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 reveal reveal-delay-1">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1564866657315-59d0d0f2f713?auto=format&fit=crop&q=80&w=600" alt="Sermon" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-navy-DEFAULT/40"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="sermon-play-btn w-12 h-12 rounded-full bg-white/90 flex items-center justify-center">
+                                <i data-lucide="play" class="w-5 h-5 text-navy-DEFAULT fill-navy-DEFAULT translate-x-0.5"></i>
+                            </div>
+                        </div>
+                        <span class="absolute bottom-3 right-3 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded-full font-semibold">38:20</span>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-[10px] font-bold text-orange-DEFAULT uppercase tracking-widest">Oct 5, 2026</span>
+                        <h4 class="font-serif font-bold text-navy-DEFAULT mt-1 mb-2 text-sm leading-snug">"Faith That Moves Mountains"</h4>
+                        <p class="text-gray-400 text-xs font-light">Practical keys to developing mountain-moving trust in God's infallible Word.</p>
+                    </div>
+                </div>
+
+                <div class="sermon-card card-premium bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 reveal reveal-delay-2">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=600" alt="Sermon" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-navy-DEFAULT/40"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="sermon-play-btn w-12 h-12 rounded-full bg-white/90 flex items-center justify-center">
+                                <i data-lucide="play" class="w-5 h-5 text-navy-DEFAULT fill-navy-DEFAULT translate-x-0.5"></i>
+                            </div>
+                        </div>
+                        <span class="absolute bottom-3 right-3 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded-full font-semibold">51:45</span>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-[10px] font-bold text-orange-DEFAULT uppercase tracking-widest">Sep 28, 2026</span>
+                        <h4 class="font-serif font-bold text-navy-DEFAULT mt-1 mb-2 text-sm leading-snug">"The Power of His Resurrection"</h4>
+                        <p class="text-gray-400 text-xs font-light">Walking in supernatural resurrection life that transforms every circumstance.</p>
+                    </div>
+                </div>
+
+                <div class="sermon-card card-premium bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 reveal reveal-delay-3">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&q=80&w=600" alt="Sermon" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-navy-DEFAULT/40"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="sermon-play-btn w-12 h-12 rounded-full bg-white/90 flex items-center justify-center">
+                                <i data-lucide="play" class="w-5 h-5 text-navy-DEFAULT fill-navy-DEFAULT translate-x-0.5"></i>
+                            </div>
+                        </div>
+                        <span class="absolute bottom-3 right-3 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded-full font-semibold">29:10</span>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-[10px] font-bold text-orange-DEFAULT uppercase tracking-widest">Sep 21, 2026</span>
+                        <h4 class="font-serif font-bold text-navy-DEFAULT mt-1 mb-2 text-sm leading-snug">"Rooted in His Love"</h4>
+                        <p class="text-gray-400 text-xs font-light">Understanding the unfathomable depth of God's unconditional and transforming love.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- MINISTRIES SECTION -->
+    <!-- ======================================================= -->
+    <section class="py-24 md:py-32 bg-section-light">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <span class="text-xs font-bold uppercase tracking-[0.3em] text-orange-DEFAULT">Built for Every Season of Life</span>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-navy-DEFAULT mt-3 leading-tight">Ministries Where You Belong</h2>
+                <p class="text-gray-500 font-light mt-4">Whatever your age, stage, or story — there is a place designed perfectly for you at Shekinah Glory Fellowship.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Ministry Card Template -->
+                <div class="ministry-card card-premium bg-white rounded-3xl overflow-hidden shadow-lg reveal reveal-delay-1">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=700" alt="Youth Ministry" class="ministry-card-img w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-DEFAULT/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-5">
+                            <span class="bg-orange-DEFAULT text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Youth</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-navy-DEFAULT mb-2">Shekinah Youth</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-5">Empowering teenagers and young adults to live boldly for Christ with unashamed faith, identity, and authentic friendship.</p>
+                        <a href="ministries.html#youth" class="text-xs font-bold text-orange-DEFAULT hover:text-navy-DEFAULT transition uppercase tracking-widest flex items-center gap-1.5">
+                            Learn More <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="ministry-card card-premium bg-white rounded-3xl overflow-hidden shadow-lg reveal reveal-delay-2">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?auto=format&fit=crop&q=80&w=700" alt="Women Ministry" class="ministry-card-img w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-DEFAULT/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-5">
+                            <span class="bg-orange-DEFAULT text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Women</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-navy-DEFAULT mb-2">Women of Glory</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-5">A safe, beautiful community where women grow spiritually, heal emotionally, and discover their God-ordained Kingdom purpose.</p>
+                        <a href="ministries.html#women" class="text-xs font-bold text-orange-DEFAULT hover:text-navy-DEFAULT transition uppercase tracking-widest flex items-center gap-1.5">
+                            Learn More <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="ministry-card card-premium bg-white rounded-3xl overflow-hidden shadow-lg reveal reveal-delay-3">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=700" alt="Men Ministry" class="ministry-card-img w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-DEFAULT/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-5">
+                            <span class="bg-orange-DEFAULT text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Men</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-navy-DEFAULT mb-2">Men of Strength</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-5">Calling men to rise in spiritual authority, serve with humble character, and lead their families with the integrity of Christ.</p>
+                        <a href="ministries.html#men" class="text-xs font-bold text-orange-DEFAULT hover:text-navy-DEFAULT transition uppercase tracking-widest flex items-center gap-1.5">
+                            Learn More <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="ministry-card card-premium bg-white rounded-3xl overflow-hidden shadow-lg reveal reveal-delay-1">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1469571486090-7db33387352a?auto=format&fit=crop&q=80&w=700" alt="Outreach" class="ministry-card-img w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-DEFAULT/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-5">
+                            <span class="bg-orange-DEFAULT text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Missions</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-navy-DEFAULT mb-2">Glory Missions</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-5">Extending the transforming love of Jesus beyond our walls — locally in Suva and into Pacific Island and international mission fields.</p>
+                        <a href="ministries.html#missions" class="text-xs font-bold text-orange-DEFAULT hover:text-navy-DEFAULT transition uppercase tracking-widest flex items-center gap-1.5">
+                            Learn More <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="ministry-card card-premium bg-white rounded-3xl overflow-hidden shadow-lg reveal reveal-delay-2">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1549576490-b0b4831ef60a?auto=format&fit=crop&q=80&w=700" alt="Worship Ministry" class="ministry-card-img w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-DEFAULT/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-5">
+                            <span class="bg-orange-DEFAULT text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Worship</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-navy-DEFAULT mb-2">Shekinah Worship</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-5">Creating consecrated, atmosphere-shifting encounters through music, arts, prayer, and the authentic declaration of God's glory.</p>
+                        <a href="ministries.html#worship" class="text-xs font-bold text-orange-DEFAULT hover:text-navy-DEFAULT transition uppercase tracking-widest flex items-center gap-1.5">
+                            Learn More <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="ministry-card card-premium bg-white rounded-3xl overflow-hidden shadow-lg reveal reveal-delay-3">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&q=80&w=700" alt="Children Ministry" class="ministry-card-img w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-DEFAULT/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-5">
+                            <span class="bg-orange-DEFAULT text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Children</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-navy-DEFAULT mb-2">Shekinah Kids</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-5">A secure, exciting, and faith-filled environment where children encounter Jesus, build friendships, and discover their incredible identity in Him.</p>
+                        <a href="ministries.html#kids" class="text-xs font-bold text-orange-DEFAULT hover:text-navy-DEFAULT transition uppercase tracking-widest flex items-center gap-1.5">
+                            Learn More <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-12 reveal">
+                <a href="ministries.html" class="btn-navy px-8 py-4 rounded-full text-white text-sm font-bold uppercase tracking-wide inline-flex items-center gap-2">
+                    View All Ministries <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- UPCOMING EVENTS SECTION -->
+    <!-- ======================================================= -->
+    <section class="py-24 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6 reveal">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-[0.3em] text-orange-DEFAULT">Mark Your Calendar</span>
+                    <h2 class="text-3xl md:text-5xl font-serif font-bold text-navy-DEFAULT mt-3 leading-tight">Upcoming Gatherings</h2>
+                </div>
+                <a href="events.html" class="inline-flex items-center gap-2 text-sm font-bold text-navy-DEFAULT hover:text-orange-DEFAULT transition uppercase tracking-wider">
+                    View Full Calendar <i data-lucide="calendar" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Event Card -->
+                <div class="card-premium bg-white rounded-3xl overflow-hidden shadow-lg border border-navy-50 reveal reveal-delay-1">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1510531704581-5b2870972060?auto=format&fit=crop&q=80&w=600" alt="Night of Worship" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-navy-DEFAULT/50"></div>
+                        <div class="absolute top-4 left-4 event-date-badge text-white px-4 py-2 rounded-xl text-center">
+                            <div class="text-2xl font-serif font-bold leading-none">18</div>
+                            <div class="text-[10px] font-bold uppercase tracking-wider">Oct</div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="px-3 py-1 rounded-full bg-orange-50 text-orange-DEFAULT text-[10px] font-bold uppercase tracking-widest border border-orange-100">Night of Worship</span>
+                        <h3 class="font-serif text-lg font-bold text-navy-DEFAULT mt-3 mb-2">Shekinah Nights: Raw Presence</h3>
+                        <p class="text-gray-400 text-sm font-light mb-5 line-clamp-2">An unscripted, extended night of open worship, altar ministry, and powerful prophetic declaration.</p>
+                        <div class="flex flex-col gap-2 text-xs text-gray-400 border-t border-gray-100 pt-4 mb-5">
+                            <span class="flex items-center gap-2"><i data-lucide="clock" class="w-3.5 h-3.5 text-orange-DEFAULT"></i> 7:00 PM — 9:30 PM</span>
+                            <span class="flex items-center gap-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-orange-DEFAULT"></i> Main Sanctuary</span>
+                        </div>
+                        <a href="events.html#night-worship" class="btn-orange w-full py-3 rounded-xl text-white text-xs font-bold uppercase tracking-wide text-center block">RSVP Now</a>
+                    </div>
+                </div>
+
+                <div class="card-premium bg-white rounded-3xl overflow-hidden shadow-lg border border-navy-50 reveal reveal-delay-2">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1469571486090-7db33387352a?auto=format&fit=crop&q=80&w=600" alt="Community Outreach" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-navy-DEFAULT/50"></div>
+                        <div class="absolute top-4 left-4 event-date-badge text-white px-4 py-2 rounded-xl text-center">
+                            <div class="text-2xl font-serif font-bold leading-none">24</div>
+                            <div class="text-[10px] font-bold uppercase tracking-wider">Oct</div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="px-3 py-1 rounded-full bg-navy-50 text-navy-DEFAULT text-[10px] font-bold uppercase tracking-widest border border-navy-100">Community Drive</span>
+                        <h3 class="font-serif text-lg font-bold text-navy-DEFAULT mt-3 mb-2">Blessing Bag Food Drive</h3>
+                        <p class="text-gray-400 text-sm font-light mb-5 line-clamp-2">Partnering as one body to prepare care packages for Suva's most vulnerable families and communities.</p>
+                        <div class="flex flex-col gap-2 text-xs text-gray-400 border-t border-gray-100 pt-4 mb-5">
+                            <span class="flex items-center gap-2"><i data-lucide="clock" class="w-3.5 h-3.5 text-orange-DEFAULT"></i> 9:00 AM — 1:00 PM</span>
+                            <span class="flex items-center gap-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-orange-DEFAULT"></i> Multi-Purpose Hall</span>
+                        </div>
+                        <a href="events.html#food-drive" class="btn-navy w-full py-3 rounded-xl text-white text-xs font-bold uppercase tracking-wide text-center block">Register / Volunteer</a>
+                    </div>
+                </div>
+
+                <div class="card-premium bg-white rounded-3xl overflow-hidden shadow-lg border border-navy-50 reveal reveal-delay-3">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=600" alt="Growth Track" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-navy-DEFAULT/50"></div>
+                        <div class="absolute top-4 left-4 event-date-badge text-white px-4 py-2 rounded-xl text-center">
+                            <div class="text-2xl font-serif font-bold leading-none">01</div>
+                            <div class="text-[10px] font-bold uppercase tracking-wider">Nov</div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-600 text-[10px] font-bold uppercase tracking-widest border border-emerald-100">Next Steps</span>
+                        <h3 class="font-serif text-lg font-bold text-navy-DEFAULT mt-3 mb-2">Connect Growth Track</h3>
+                        <p class="text-gray-400 text-sm font-light mb-5 line-clamp-2">Discover your spiritual gifts, join a ministry team, and go deeper in your personal walk with Christ.</p>
+                        <div class="flex flex-col gap-2 text-xs text-gray-400 border-t border-gray-100 pt-4 mb-5">
+                            <span class="flex items-center gap-2"><i data-lucide="clock" class="w-3.5 h-3.5 text-orange-DEFAULT"></i> 1:00 PM (Post 2nd Service)</span>
+                            <span class="flex items-center gap-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-orange-DEFAULT"></i> Classroom A</span>
+                        </div>
+                        <a href="events.html#growth-track" class="btn-orange w-full py-3 rounded-xl text-white text-xs font-bold uppercase tracking-wide text-center block">Join Growth Track</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- PLAN YOUR VISIT — IMMERSIVE SECTION -->
+    <!-- ======================================================= -->
+    <section class="py-24 md:py-32 relative overflow-hidden" id="visit">
+        <div class="absolute inset-0 bg-hero-warm z-0"></div>
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1438032005730-c779502df39b?auto=format&fit=crop&q=80&w=1920')] bg-cover bg-center opacity-15 mix-blend-overlay z-0"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-navy-DEFAULT/60 z-0"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <div class="flex flex-col gap-6 text-white reveal">
+                <span class="text-xs font-bold uppercase tracking-[0.3em] text-orange-DEFAULT">First-Time Visitors</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold leading-tight">
+                    We've Reserved <br>A Seat <span class="italic text-orange-DEFAULT">Just For You</span>
+                </h2>
+                <p class="text-white/80 font-light leading-relaxed text-lg">
+                    We know visiting a new church can feel overwhelming. At Shekinah Glory Fellowship, a dedicated host will meet you at the door, assist with children check-in, show you around, and make sure you're absolutely comfortable from the moment you arrive.
+                </p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                    <div class="glass-white p-5 rounded-2xl flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-orange-DEFAULT/30 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="clock" class="w-5 h-5 text-orange-DEFAULT"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold uppercase tracking-wide">Sundays</h4>
+                            <p class="text-white/60 text-xs">9:00 AM &amp; 11:30 AM</p>
+                        </div>
+                    </div>
+                    <div class="glass-white p-5 rounded-2xl flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-orange-DEFAULT/30 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="flame" class="w-5 h-5 text-orange-DEFAULT"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold uppercase tracking-wide">Wednesdays</h4>
+                            <p class="text-white/60 text-xs">7:00 PM Prayer Night</p>
+                        </div>
+                    </div>
+                    <div class="glass-white p-5 rounded-2xl flex items-center gap-4 sm:col-span-2">
+                        <div class="w-10 h-10 rounded-full bg-orange-DEFAULT/30 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-orange-DEFAULT"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold uppercase tracking-wide">Our Address</h4>
+                            <p class="text-white/60 text-xs">VFM7+HR8 Golf Link Rd, Suva, Fiji</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visit Registration Form -->
+            <div class="glass-navy p-8 md:p-10 rounded-3xl reveal reveal-delay-2">
+                <h3 class="text-2xl font-serif font-bold text-white mb-2">Plan Your Visit</h3>
+                <p class="text-white/60 text-sm mb-8">Fill out the form and we'll prepare your warm welcome.</p>
+                <form class="flex flex-col gap-5" onsubmit="handleVisitForm(event)">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="text-[10px] font-bold uppercase tracking-wider text-white/60 mb-1.5 block">First Name</label>
+                            <input type="text" required placeholder="John" class="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 focus:border-orange-DEFAULT focus:outline-none focus:bg-white/15 transition">
+                        </div>
+                        <div>
+                            <label class="text-[10px] font-bold uppercase tracking-wider text-white/60 mb-1.5 block">Last Name</label>
+                            <input type="text" required placeholder="Smith" class="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 focus:border-orange-DEFAULT focus:outline-none focus:bg-white/15 transition">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="text-[10px] font-bold uppercase tracking-wider text-white/60 mb-1.5 block">Email Address</label>
+                        <input type="email" required placeholder="you@email.com" class="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 focus:border-orange-DEFAULT focus:outline-none focus:bg-white/15 transition">
+                    </div>
+                    <div>
+                        <label class="text-[10px] font-bold uppercase tracking-wider text-white/60 mb-1.5 block">Phone (Optional)</label>
+                        <input type="tel" placeholder="+679 xxx xxxx" class="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 focus:border-orange-DEFAULT focus:outline-none focus:bg-white/15 transition">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="text-[10px] font-bold uppercase tracking-wider text-white/60 mb-1.5 block">Preferred Service</label>
+                            <select class="w-full bg-navy-dark border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:border-orange-DEFAULT focus:outline-none transition">
+                                <option>Sunday 9:00 AM</option>
+                                <option>Sunday 11:30 AM</option>
+                                <option>Wednesday 7:00 PM</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="text-[10px] font-bold uppercase tracking-wider text-white/60 mb-1.5 block">Bringing Children?</label>
+                            <select class="w-full bg-navy-dark border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:border-orange-DEFAULT focus:outline-none transition">
+                                <option>No Children</option>
+                                <option>1–2 Children</option>
+                                <option>3+ Children</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-orange w-full py-4 rounded-xl text-white text-sm font-bold uppercase tracking-widest mt-2">
+                        Submit Visit Request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- TESTIMONIALS SECTION -->
+    <!-- ======================================================= -->
+    <section class="py-24 md:py-32 bg-section-light">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <span class="text-xs font-bold uppercase tracking-[0.3em] text-orange-DEFAULT">Stories of Transformation</span>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-navy-DEFAULT mt-3 leading-tight">What Our Community Says</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="testimonial-card reveal reveal-delay-1">
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-1 text-orange-DEFAULT mb-4">
+                            ★★★★★
+                        </div>
+                        <p class="text-gray-600 font-light leading-relaxed text-sm mb-6">
+                            "Walking into Shekinah Glory felt like coming home. The worship was genuine, the people were warm, and I left completely changed. I haven't missed a Sunday since."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-navy-DEFAULT flex items-center justify-center text-white font-bold text-sm flex-shrink-0">SM</div>
+                            <div>
+                                <h4 class="font-bold text-navy-DEFAULT text-sm">Sarah Mitchell</h4>
+                                <p class="text-[10px] text-gray-400 uppercase tracking-wider">Member — 3 years</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal reveal-delay-2">
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-1 text-orange-DEFAULT mb-4">
+                            ★★★★★
+                        </div>
+                        <p class="text-gray-600 font-light leading-relaxed text-sm mb-6">
+                            "My life was in ruins. I walked into SGF broken, and left with hope. The prayer team prayed over me and something supernatural happened that evening. I'm forever grateful."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-orange-DEFAULT flex items-center justify-center text-white font-bold text-sm flex-shrink-0">DV</div>
+                            <div>
+                                <h4 class="font-bold text-navy-DEFAULT text-sm">David Vunisa</h4>
+                                <p class="text-[10px] text-gray-400 uppercase tracking-wider">First-Time Visitor Turned Leader</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal reveal-delay-3">
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-1 text-orange-DEFAULT mb-4">
+                            ★★★★★
+                        </div>
+                        <p class="text-gray-600 font-light leading-relaxed text-sm mb-6">
+                            "Our family relocated to Suva not knowing anyone. Shekinah Glory instantly became our Fijian family. The community care, the children's ministry, and the teaching is world-class."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-navy-light flex items-center justify-center text-white font-bold text-sm flex-shrink-0">TK</div>
+                            <div>
+                                <h4 class="font-bold text-navy-DEFAULT text-sm">The Kumar Family</h4>
+                                <p class="text-[10px] text-gray-400 uppercase tracking-wider">Family Ministry</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- PRAYER SECTION -->
+    <!-- ======================================================= -->
+    <section class="py-24 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <div class="flex flex-col gap-6 reveal">
+                <span class="text-xs font-bold uppercase tracking-[0.3em] text-orange-DEFAULT">Intercession & Prayer</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-navy-DEFAULT leading-tight">
+                    Submit Your <span class="text-orange-gradient">Prayer Request</span>
+                </h2>
+                <p class="text-gray-500 font-light leading-relaxed text-lg">
+                    Our dedicated prayer intercessors stand ready to bring your petition before the throne of grace. No need is too small. No burden is too heavy. We believe in the supernatural power of united prayer.
+                </p>
+                <div class="bg-navy-50 border border-navy-100 p-6 rounded-2xl flex items-start gap-4">
+                    <i data-lucide="shield-check" class="w-8 h-8 text-navy-DEFAULT flex-shrink-0"></i>
+                    <p class="text-sm text-navy-DEFAULT/80 font-light leading-relaxed">
+                        <strong class="font-bold">Your privacy is protected.</strong> All prayer requests are handled with complete confidentiality by our authorized prayer ministry team only.
+                    </p>
+                </div>
+                <blockquote class="border-l-4 border-orange-DEFAULT pl-5 italic text-gray-400 font-light">
+                    "The effective, fervent prayer of a righteous man avails much." — James 5:16
+                </blockquote>
+            </div>
+
+            <!-- Prayer Form -->
+            <div class="bg-section-light rounded-3xl p-8 md:p-12 border border-navy-100 reveal reveal-delay-2">
+                <h3 class="text-xl font-serif font-bold text-navy-DEFAULT mb-6">How Can We Pray For You?</h3>
+                <form class="flex flex-col gap-5" onsubmit="handlePrayerForm(event)">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="text-[10px] font-bold uppercase tracking-wider text-gray-500 mb-1.5 block">First Name (Optional)</label>
+                            <input type="text" placeholder="Anonymous" class="form-input w-full rounded-xl px-4 py-3 text-sm bg-white focus:bg-white">
+                        </div>
+                        <div>
+                            <label class="text-[10px] font-bold uppercase tracking-wider text-gray-500 mb-1.5 block">Phone / Email</label>
+                            <input type="text" placeholder="If you'd like a callback" class="form-input w-full rounded-xl px-4 py-3 text-sm bg-white">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="text-[10px] font-bold uppercase tracking-wider text-gray-500 mb-1.5 block">Your Prayer Request *</label>
+                        <textarea required rows="5" placeholder="Share what's on your heart..." class="form-input w-full rounded-xl px-4 py-3 text-sm bg-white resize-none"></textarea>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <input type="checkbox" id="prayerWall" class="w-4 h-4 accent-navy-DEFAULT rounded">
+                        <label for="prayerWall" class="text-xs text-gray-500 cursor-pointer">Share my first name & request on the online prayer wall</label>
+                    </div>
+                    <button type="submit" class="btn-orange w-full py-4 rounded-xl text-white text-sm font-bold uppercase tracking-widest">
+                        Submit Prayer Request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- GIVING SECTION -->
+    <!-- ======================================================= -->
+    <section class="py-24 md:py-32 bg-navy-DEFAULT relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-10 left-10 w-96 h-96 rounded-full bg-white blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-80 h-80 rounded-full bg-orange-DEFAULT blur-3xl"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <span class="text-xs font-bold uppercase tracking-[0.3em] text-orange-DEFAULT">Generosity in Action</span>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mt-3 leading-tight">Sow Into Eternal Legacy</h2>
+                <p class="text-white/60 font-light mt-4 leading-relaxed">
+                    Your giving fuels kingdom-advancing ministry right here in Suva, Fiji and around the world. Every seed sown creates an eternal return.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                
+                <div class="giving-card reveal reveal-delay-1">
+                    <div class="h-2 bg-orange-DEFAULT"></div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 rounded-2xl bg-orange-50 flex items-center justify-center mb-5">
+                            <i data-lucide="globe" class="w-6 h-6 text-orange-DEFAULT"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-navy-DEFAULT mb-3">General Tithes</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">Support the entire operational and ministry vision of Shekinah Glory Fellowship Church.</p>
+                        <a href="give.html#tithe" class="btn-orange w-full py-3 rounded-xl text-white text-xs font-bold uppercase tracking-wide text-center block">Give Tithes</a>
+                    </div>
+                </div>
+
+                <div class="giving-card reveal reveal-delay-2">
+                    <div class="h-2 bg-navy-DEFAULT"></div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 rounded-2xl bg-navy-50 flex items-center justify-center mb-5">
+                            <i data-lucide="home" class="w-6 h-6 text-navy-DEFAULT"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-navy-DEFAULT mb-3">Building Fund</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">Partner with our dream to expand our facilities and create more room for Suva's growing community.</p>
+                        <a href="give.html#building" class="btn-navy w-full py-3 rounded-xl text-white text-xs font-bold uppercase tracking-wide text-center block">Sow Into Building</a>
+                    </div>
+                </div>
+
+                <div class="giving-card reveal reveal-delay-3">
+                    <div class="h-2 bg-gradient-to-r from-orange-DEFAULT to-navy-DEFAULT"></div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 rounded-2xl bg-orange-50 flex items-center justify-center mb-5">
+                            <i data-lucide="send" class="w-6 h-6 text-orange-DEFAULT"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-navy-DEFAULT mb-3">Missions Fund</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">Help us take the Gospel to the Pacific Islands and international mission fields that need Jesus.</p>
+                        <a href="give.html#missions" class="btn-orange w-full py-3 rounded-xl text-white text-xs font-bold uppercase tracking-wide text-center block">Support Missions</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center reveal">
+                <a href="give.html" class="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-white text-navy-DEFAULT text-sm font-bold uppercase tracking-wide hover:bg-orange-DEFAULT hover:text-white transition-all duration-300 shadow-xl">
+                    <i data-lucide="heart" class="w-5 h-5 fill-current"></i> Give Online Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- LOCATION & CONTACT CTA BAR -->
+    <!-- ======================================================= -->
+    <section class="py-16 bg-orange-DEFAULT">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="text-white text-center md:text-left">
+                <h3 class="text-2xl md:text-3xl font-serif font-bold">Ready to Experience God's Presence?</h3>
+                <p class="text-white/80 mt-2 font-light">Join us this Sunday in Suva, Fiji. We can't wait to meet you.</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 flex-shrink-0">
+                <a href="contact.html" class="px-8 py-4 rounded-full bg-white text-orange-DEFAULT text-sm font-bold uppercase tracking-wide hover:bg-navy-DEFAULT hover:text-white transition duration-300 text-center">
+                    Get in Touch
+                </a>
+                <a href="https://maps.google.com" target="_blank" class="px-8 py-4 rounded-full glass-white text-white text-sm font-bold uppercase tracking-wide hover:bg-white/20 transition duration-300 text-center flex items-center gap-2 justify-center">
+                    <i data-lucide="map" class="w-4 h-4"></i> Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- PREMIUM FOOTER -->
+    <!-- ======================================================= -->
+    <footer class="bg-navy-dark text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            
+            <!-- Footer Top Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-14 border-b border-white/10">
+                
+                <!-- Brand Column -->
+                <div class="lg:col-span-4">
+                    <a href="index.html" class="flex items-center gap-3 group mb-6">
+                        <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-orange-DEFAULT/40">
+                            <img src="logo.jpg" alt="Shekinah Glory Fellowship" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <div class="font-serif text-xl font-bold text-white">Shekinah Glory</div>
+                            <div class="text-[10px] font-bold uppercase tracking-[0.25em] text-orange-DEFAULT">Fellowship Church</div>
+                        </div>
+                    </a>
+                    <p class="text-white/50 font-light text-sm leading-relaxed mb-6 max-w-xs">
+                        Experiencing God's Presence & Power in the heart of Suva, Fiji. A family built on faith, love, and the Word of God.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-orange-DEFAULT flex items-center justify-center transition duration-300"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-orange-DEFAULT flex items-center justify-center transition duration-300"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-orange-DEFAULT flex items-center justify-center transition duration-300"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-orange-DEFAULT flex items-center justify-center transition duration-300"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="lg:col-span-2">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-orange-DEFAULT mb-5">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="about.html" class="text-white/50 hover:text-white transition">About SGF</a></li>
+                        <li><a href="about.html#pastors" class="text-white/50 hover:text-white transition">Leadership</a></li>
+                        <li><a href="ministries.html" class="text-white/50 hover:text-white transition">Ministries</a></li>
+                        <li><a href="events.html" class="text-white/50 hover:text-white transition">Events</a></li>
+                        <li><a href="sermons.html" class="text-white/50 hover:text-white transition">Sermons</a></li>
+                        <li><a href="give.html" class="text-white/50 hover:text-white transition">Give</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div class="lg:col-span-2">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-orange-DEFAULT mb-5">Resources</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="sermons.html#watch" class="text-white/50 hover:text-white transition">Watch Online</a></li>
+                        <li><a href="sermons.html#podcast" class="text-white/50 hover:text-white transition">Podcast</a></li>
+                        <li><a href="index.html#prayer" class="text-white/50 hover:text-white transition">Prayer Request</a></li>
+                        <li><a href="contact.html#visit" class="text-white/50 hover:text-white transition">Plan Your Visit</a></li>
+                        <li><a href="contact.html" class="text-white/50 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Service Times & Contact -->
+                <div class="lg:col-span-4">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-orange-DEFAULT mb-5">Service Times</h4>
+                    <div class="space-y-3 text-sm mb-6">
+                        <div class="flex justify-between border-b border-white/10 pb-2">
+                            <span class="text-white/70 font-semibold">Sunday Service</span>
+                            <span class="text-white/50">9:00 AM &amp; 11:30 AM</span>
+                        </div>
+                        <div class="flex justify-between border-b border-white/10 pb-2">
+                            <span class="text-white/70 font-semibold">Wednesday Prayer</span>
+                            <span class="text-white/50">7:00 PM</span>
+                        </div>
+                    </div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-orange-DEFAULT mb-4">Contact</h4>
+                    <div class="space-y-3 text-sm">
+                        <p class="flex items-start gap-2.5 text-white/50">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-orange-DEFAULT flex-shrink-0 mt-0.5"></i>
+                            VFM7+HR8 Golf Link Rd, Suva, Fiji
+                        </p>
+                        <a href="tel:+6799335862" class="flex items-center gap-2.5 text-white/50 hover:text-white transition">
+                            <i data-lucide="phone" class="w-4 h-4 text-orange-DEFAULT"></i>+679 933 5862
+                        </a>
+                        <a href="mailto:info@shekinahgloryfellowship.fj" class="flex items-center gap-2.5 text-white/50 hover:text-white transition">
+                            <i data-lucide="mail" class="w-4 h-4 text-orange-DEFAULT"></i>info@shekinahgloryfellowship.fj
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="flex flex-col md:flex-row items-center justify-between pt-8 gap-4 text-xs text-white/30">
+                <p>&copy; 2026 Shekinah Glory Fellowship Church, Suva, Fiji. All Rights Reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white/60 transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white/60 transition">Terms of Use</a>
+                    <a href="contact.html" class="hover:text-white/60 transition">Contact</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ======================================================= -->
+    <!-- JAVASCRIPT — INTERACTIONS & ANIMATIONS -->
+    <!-- ======================================================= -->
+    <script>
+        // ---- Initialize Lucide Icons ----
+        lucide.createIcons();
+
+        // ---- Sticky Header Scroll Effect ----
+        const header = document.getElementById('mainHeader');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 80) {
+                header.classList.add('shadow-lg');
+                header.style.borderBottom = '1px solid rgba(27,42,107,0.08)';
+            } else {
+                header.classList.remove('shadow-lg');
+                header.style.borderBottom = 'none';
+            }
+        });
+
+        // ---- Mobile Menu Toggle ----
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+        let menuOpen = false;
+
+        mobileBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            mobileMenu.classList.toggle('hidden', !menuOpen);
+            menuIcon.setAttribute('data-lucide', menuOpen ? 'x' : 'menu');
+            lucide.createIcons();
+        });
+
+        // ---- Scroll Reveal Animation ----
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ---- Form Handlers with friendly feedback ----
+        function handleVisitForm(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            btn.textContent = '✓ Visit Request Received!';
+            btn.style.background = 'linear-gradient(135deg, #1B2A6B, #2D3F8F)';
+            setTimeout(() => {
+                btn.textContent = 'Submit Visit Request';
+                btn.style.background = '';
+                e.target.reset();
+            }, 4000);
+        }
+
+        function handlePrayerForm(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            btn.textContent = '✓ Prayer Received — We Are Praying!';
+            btn.style.background = 'linear-gradient(135deg, #1B2A6B, #2D3F8F)';
+            setTimeout(() => {
+                btn.textContent = 'Submit Prayer Request';
+                btn.style.background = '';
+                e.target.reset();
+            }, 5000);
+        }
+
+        // ---- Smooth Active Nav Detection ----
+        const sections = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                const top = sec.offsetTop - 120;
+                if (window.scrollY >= top) current = sec.getAttribute('id');
+            });
+        });
+    </script>
+
+</body>
+</html>
